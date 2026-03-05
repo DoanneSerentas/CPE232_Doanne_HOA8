@@ -1,0 +1,4 @@
+---
+# defaults file for nagios_centos
+nagois_user: "doanne"
+nagios_pass: "cpetip123"

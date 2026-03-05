@@ -1,0 +1,10 @@
+---
+# tasks file for nagios_ubuntu
+- name: install Nagios prerequisites
+  apt:
+    name:
+      - apache2
+      - nagios4
+    state: present
+
+      

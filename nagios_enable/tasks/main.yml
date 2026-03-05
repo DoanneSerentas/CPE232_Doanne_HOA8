@@ -1,0 +1,29 @@
+---
+# tasks file for nagios_enable
+- name: enable apache2 service
+  ansible.builtin.service:
+    name: apache2
+    enabled: yes
+    state: started 
+  when: ansible_os_family == "Debian"
+
+- name: enable httpd service for centos
+  ansible.builtin.service:
+    name: httpd
+    enabled: yes
+    state: started 
+  when: ansible_os_family == "RedHat"
+
+- name: Enable nagios service
+  ansible.builtin.service:
+    name: nagios4
+    enabled: yes
+    state: started 
+  when: ansible_os_family == "Debian"
+
+- name: Enable nagios service for centos
+  ansible.builtin.service:
+    name: nagios
+    enabled: yes
+    state: started 
+  when: ansible_os_family == "RedHat"

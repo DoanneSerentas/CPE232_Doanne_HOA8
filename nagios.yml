@@ -1,0 +1,15 @@
+---
+- hosts: ubuntu_servers
+  become: true
+  roles:
+    - nagios_ubuntu
+
+- hosts: centos_servers
+  become: true
+  roles:
+    - nagios_centos
+
+- hosts: all
+  become: true
+  roles:
+    - nagios_enable

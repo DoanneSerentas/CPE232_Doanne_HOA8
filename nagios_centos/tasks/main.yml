@@ -1,0 +1,13 @@
+---
+# tasks file for nagios_centos
+- name: Install EPEL repository
+  dnf:
+    name: epel-release
+    state: present
+
+- name: Install Nagios and Apache dependencies
+  dnf:
+    name:
+      - nagios
+    state: present
+

@@ -1,0 +1,11 @@
+---
+# handlers file for nagios_centos
+- name: restart httpd
+  service:
+    name: httpd
+    state: restarted
+
+- name: restart nagios
+  service:
+    name: nagios
+    state: restarted

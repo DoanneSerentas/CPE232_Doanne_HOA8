@@ -1,0 +1,4 @@
+---
+# vars file for nagios_centos
+nagios_user: "doanne"
+nagios_pass: "cpetip123"
